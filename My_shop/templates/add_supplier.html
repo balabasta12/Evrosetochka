@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+
+<form action="{% url 'add_supplier' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить</button>
+    <input type="file" name="Добавить файл">
+</form>
+
+{% endblock %}
