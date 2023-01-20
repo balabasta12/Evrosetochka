@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework.authtoken',  # для получения токина
     'shop.apps.ShopConfig',
+    'tests',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
         "PASSWORD": "Qwerty1111",
         "HOST": "127.0.0.1",
         "PORT": 5432,
-        # "ATOMIC_REQUESTS": True,
+        "ATOMIC_REQUESTS": True,
     }
 }
 
@@ -110,12 +111,12 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTH_USER_MODEL = "shop.User"
 
 REST_FRAMEWORK = {
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-#         'rest_framework.authentication.TokenAuthentication',
-#     ),
-#     'DEFAULT_PERMISSION_CLASSES': (
-#         'rest_framework.permissions.IsAuthenticated',
-#     )
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
 }
 
 # Internationalization
